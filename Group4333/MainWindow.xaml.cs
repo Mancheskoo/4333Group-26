@@ -6,5 +6,11 @@ namespace Group4333
     {
         public MainWindow()
             => InitializeComponent();
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            _4333_MonichArtem info = new _4333_MonichArtem();
+            info.Show();
+        }
     }
 }
