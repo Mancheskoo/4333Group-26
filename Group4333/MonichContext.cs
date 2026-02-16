@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Data.Entity; // Если используешь .NET Framework
+using System.Data.Entity;
 
 namespace Group4333
 {
-    // Класс контекста — это "пульт управления" твоей базой данных
     public class MonichContext : DbContext
     {
-        // Конструктор: "MonichConnection" — это имя строки из App.config (создадим на след. шаге)
         public MonichContext() : base("name=MonichConnection")
         {
         }
 
         public DbSet<Clients> Clients { get; set; }
     }
-
-    // Класс сущности (таблица Clients из твоей БД)
     public class Clients
     {
         public int ID { get; set; }
